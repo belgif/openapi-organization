@@ -7,4 +7,19 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0.html
 paths: {}
 definitions:
-  {}
+  NaceCode:
+    description: NACE activity code (international). The first two digits are division of activity. Each further digit specifies an additional level of detail within the category of the previous level. The meaning of the first four digits are standard and defined by EU. Further digits may vary from country to country.
+    type: string
+    pattern: '^\d{2}\d*$'
+
+  NaceBel2008Code:
+    description: Belgian NACE activity code of 2 up to 7 digits long. The meaning of the first four digits are standard across all countries. The last 3 digits are defined in the Belgian NACE 2008 list.
+    type: string
+    pattern: '^\d{2}\d{0,5}$'
+    # this is a more constrained version of the international NaceCode schema
+
+  NaceBel2008Length5Code:
+    description: Belgian NACE activity code of 5 digits long, as used for NSSO and for VAT purposes. The meaning of the first four digits are standard across all countries. The last digit is defined in the Belgian NACE 2008 list.
+    type: string
+    pattern: '^\d{5}$'
+    # this is a more constrained version of the variable-length NaceBel2008Code schema
