@@ -1,0 +1,74 @@
+openapi: 3.0.0
+info:
+  title: Reusable components about organizations
+  version: "${project.version}"
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers: []
+paths: {}
+components:
+  schemas:
+    Nace2Code:
+      description: |
+        NACE activity code (international, Revision 2).
+        Either a single capital letter, or a numerical code.
+        
+        A letter code describes the section of activity at the most general level.     
+        In case of numerical code, the first two digits are the division of activity, a more precise categorization. Each further digit adds an additional level of detail.
+        The meaning of the first four digits are standard across all countries. Further digits may vary from country to country.
+      type: string
+      pattern: '^([A-Z]{1}|\d{2}\d*)$'
+
+    Nace2_1Code:
+      description: |
+        NACE activity code (international, Revision 2.1).
+        Either a single capital letter, or a numerical code.
+
+        A letter code describes the section of activity at the most general level.     
+        In case of numerical code, the first two digits are the division of activity, a more precise categorization. Each further digit adds an additional level of detail.
+        The meaning of the first four digits are standard across all countries. Further digits may vary from country to country.
+      type: string
+      pattern: '^([A-Z]{1}|\d{2}\d*)$'
+
+    NaceBel2008Code:
+      description: |
+        Belgian NACE activity code (version 2008).
+        Either a single capital letter, or numerical of 2 up to 7 digits long.
+  
+        The meaning of the first four digits are standard across all countries, defined by NACE Revision 2.
+        The last 3 digits are defined in the Belgian NACE 2008 list.
+      type: string
+      pattern: '^([A-Z]{1}|\d{2}\d{0,5})$'
+      # this is a more constrained version of the international Nace2Code schema
+
+    NaceBel2008Length5Code:
+      description: |
+        Belgian NACE activity code of 5 digits, as used for NSSO and for VAT purposes (version 2008).
+        
+        The meaning of the first four digits are standard across all countries, defined by NACE Revision 2.
+        The last digit is defined in the Belgian NACE 2025 list.
+      type: string
+      pattern: '^\d{5}$'
+      # this is a more constrained version of the variable-length NaceBel2008Code schema
+
+    NaceBel2025Code:
+      description: |
+        Belgian NACE activity code (version 2025).
+        Either a single capital letter, or numerical of 2 up to 7 digits long.
+
+        The meaning of the first four digits are standard across all countries, defined by NACE Revision 2_1.
+        The last 3 digits are defined in the Belgian NACE 2025 list.
+      type: string
+      pattern: '^([A-Z]{1}|\d{2}\d{0,5})$'
+      # this is a more constrained version of the international Nace2_1Code schema
+
+    NaceBel2025Length5Code:
+      description: |
+        Belgian NACE activity code of 5 digits, as used for NSSO and for VAT purposes (version 2025).
+
+        The meaning of the first four digits are standard across all countries, defined by NACE Revision 2_1.
+        The last digit is defined in the Belgian NACE 2025 list.
+      type: string
+      pattern: '^\d{5}$'
+      # this is a more constrained version of the variable-length NaceBel2025Code schema
