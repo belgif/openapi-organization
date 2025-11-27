@@ -28,7 +28,7 @@
 				</executions>
 				<configuration>
 					<files>
-						<file>src/main/openapi/organization/v1/organization-v1.yaml</file>
+						<file>src/main/openapi/organization/v2/organization-v2.yaml</file>
 					</files>
 				</configuration>
 			</plugin>

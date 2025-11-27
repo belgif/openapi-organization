@@ -30,7 +30,8 @@ components:
         The meaning of the first four digits are standard across all countries. Further digits may vary from country to country.
       type: string
       pattern: '^([A-Z]{1}|\d{2}\d*)$'
-
+      x-ignore-rules:
+        "oas-comp": The underscore is used in the schema name to indicate Revision 2.1, differentiating from Nace2Code (Revision 2)
     NaceBel2008Code:
       description: |
         Belgian NACE activity code (version 2008).
