@@ -9,7 +9,7 @@ servers: []
 paths: {}
 components:
   schemas:
-    Nace2Code:
+    NaceRev2Code:
       description: |
         NACE activity code (international, Revision 2).
         Either a single capital letter, or a numerical code.
@@ -20,7 +20,7 @@ components:
       type: string
       pattern: '^([A-Z]{1}|\d{2}\d*)$'
 
-    Nace2_1Code:
+    NaceRev2_1Code:
       description: |
         NACE activity code (international, Revision 2.1).
         Either a single capital letter, or a numerical code.
