@@ -48,7 +48,7 @@ components:
         Belgian NACE activity code of 5 digits, as used for NSSO and for VAT purposes (version 2008).
         
         The meaning of the first four digits are standard across all countries, defined by NACE Revision 2.
-        The last digit is defined in the Belgian NACE 2025 list.
+        The last digit is defined in the Belgian NACE 2008 list.
       type: string
       pattern: '^\d{5}$'
       # this is a more constrained version of the variable-length NaceBel2008Code schema
